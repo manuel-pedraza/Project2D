@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Project2D.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F8443EB0-22A8-467A-B800-B54B3C4C5E30}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Project2D.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Project2DEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{F9A36F88-5C32-466E-A3FB-6275901D1572}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Project2D">
+      <UniqueIdentifier>{15932C66-C430-4166-9262-45E42A4CC72D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Project2D\Project2D.Build.cs">
+      <Filter>Source\Project2D</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Project2D\Project2D.cpp">
+      <Filter>Source\Project2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\Project2D.h">
+      <Filter>Source\Project2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\Project2DCharacter.cpp">
+      <Filter>Source\Project2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\Project2DCharacter.h">
+      <Filter>Source\Project2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\Project2DGameMode.cpp">
+      <Filter>Source\Project2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\Project2DGameMode.h">
+      <Filter>Source\Project2D</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
