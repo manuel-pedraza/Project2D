@@ -9,7 +9,7 @@
 class UTextRenderComponent;
 
 UENUM()
-enum CharacterState
+enum CharacterAnimationState
 {
 	Idle		UMETA(DisplayName = "Idle"),
 	Walking		UMETA(DisplayName = "Walking"),
@@ -47,7 +47,7 @@ class AProject2DCharacter : public APaperCharacter
 	virtual void Tick(float DeltaSeconds) override;
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
-	TEnumAsByte<CharacterState> state;
+	TEnumAsByte<CharacterAnimationState> state;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -81,6 +81,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 		class UPaperFlipbook* DeadAnimation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Properties)
+		float CurrentHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Properties)
+		float MaxWalikingSpeed = 100.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Properties)
+		float MaxRunningSpeed = 150.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Properties)
+		bool IsRunning = false;
+
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
 
@@ -103,6 +115,8 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
+
+	virtual void BeginPlay() override;
 
 public:
 	AProject2DCharacter();
