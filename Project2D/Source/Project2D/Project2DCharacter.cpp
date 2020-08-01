@@ -90,72 +90,49 @@ void AProject2DCharacter::UpdateAnimation()
 
 	UPaperFlipbook* DesiredAnimation = nullptr;
 
-	if (CurrentHealth <= 0)
+	if (state == CharacterState::Jumping || state == CharacterState::Falling)
 	{
+		//(JumpKeyHoldTime >= GetJumpMaxHoldTime() || JumpKeyHoldTime == 0.0f)
 
-		state = CharacterAnimationState::Dead;
-		DisableInput(Cast<APlayerController>(this));
-
-	}
-	else if (state == CharacterAnimationState::Jumping || state == CharacterAnimationState::Falling)
-	{
-
-		//&& GetCharacterMovement()->MovementMode == EMovementMode::MOVE_Falling)
-
-		state = (PlayerVelocity.Z < 0)  ? CharacterAnimationState::Falling : CharacterAnimationState::Jumping;
+		state = ( PlayerVelocity.Z < 0 && GetCharacterMovement()->MovementMode == EMovementMode::MOVE_Falling) ?
+			CharacterState::Falling : CharacterState::Jumping;
 
 	}
 	else
 	{
-
-		if (PlayerSpeedSqr == 0.0f)
-			state = CharacterAnimationState::Idle;
-		else
-		{
-			
-
-			state = (PlayerVelocity.X < MaxWalikingSpeed + 1 && PlayerVelocity.X > MaxWalikingSpeed * -1 - 1) ? CharacterAnimationState::Walking : CharacterAnimationState::Running;
-
-		}
-
+		state = (PlayerSpeedSqr > 0.0f) ? CharacterState::Walking : CharacterState::Idle;
 	}
 
-
-	if (PlayerSpeedSqr >= 0.f)
-	{
-		//UE_LOG(LogTemp, Warning,  TEXT("Player X speed: %f"), PlayerVelocity.X);
-	}
-	
 
 	switch (state)
 	{
-		case CharacterAnimationState::Idle:
+		case CharacterState::Idle:
 			DesiredAnimation = IdleAnimation;
 			break;
-		case CharacterAnimationState::Walking:
+		case CharacterState::Walking:
 			DesiredAnimation = WalkingAnimation;
 			break;
-		case CharacterAnimationState::Running:
+		case CharacterState::Running:
 			DesiredAnimation = RunningAnimation;
 			break;
-		case CharacterAnimationState::Jumping:
+		case CharacterState::Jumping:
 			DesiredAnimation = JumpingAnimation;
 			break;
-		case CharacterAnimationState::Falling:
+		case CharacterState::Falling:
 			DesiredAnimation = FallingAnimation;
 			break;
-		case CharacterAnimationState::LookingUp:
+		case CharacterState::LookingUp:
 			DesiredAnimation = LookingUpAnimation;
 			break;
-		case CharacterAnimationState::Crouch:
+		case CharacterState::Crouch:
 			DesiredAnimation = CrouchAnimation;
 			break;
-		case CharacterAnimationState::Dead:
+		case CharacterState::Dead:
 			DesiredAnimation = DeadAnimation;
 			break;
 
-		default:
-			break;
+	default:
+		break;
 	}
 
 
@@ -173,7 +150,7 @@ void AProject2DCharacter::Jump()
 	// Jump on any touch
 	ACharacter::Jump();
 	//UE_LOG(LogTemp, Warning, TEXT("I'm jumping"));
-	state = CharacterAnimationState::Jumping;
+	state = CharacterState::Jumping;
 }
 
 void AProject2DCharacter::StopJumping()
@@ -206,15 +183,6 @@ void AProject2DCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindTouch(IE_Released, this, &AProject2DCharacter::TouchStopped);
 }
 
-void AProject2DCharacter::BeginPlay()
-{
-	CurrentHealth = 1.f;
-	//UE_LOG(LogTemp, Warning, TEXT("lol"));
-
-
-	ACharacter::BeginPlay();
-}
-
 void AProject2DCharacter::MoveRight(float Value)
 {
 	/*UpdateChar();*/
@@ -236,21 +204,6 @@ void AProject2DCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, cons
 void AProject2DCharacter::UpdateCharacter()
 {
 
-	if (IsRunning) 
-	{
-		GetCharacterMovement()->MaxWalkSpeed += 2.0f * (GetCharacterMovement()->MaxWalkSpeed < MaxRunningSpeed);
-		UE_LOG(LogTemp, Warning, TEXT("MaxRunningSpeed: %f"), MaxRunningSpeed);
-		UE_LOG(LogTemp, Log, TEXT("+2 / %f"), GetCharacterMovement()->MaxWalkSpeed);
-	
-	}
-	else 
-	{
-		GetCharacterMovement()->MaxWalkSpeed -= 2.0f * (GetCharacterMovement()->MaxWalkSpeed > MaxWalikingSpeed);
-		UE_LOG(LogTemp, Warning, TEXT("MaxWalkingSpeed: %f"), MaxWalikingSpeed);
-		UE_LOG(LogTemp, Log, TEXT("-2/ %f"), GetCharacterMovement()->MaxWalkSpeed);
-	
-	}
-
 	// Update animation to match the motion
 	UpdateAnimation();
 
@@ -258,8 +211,6 @@ void AProject2DCharacter::UpdateCharacter()
 	const FVector PlayerVelocity = GetVelocity();
 	float TravelDirection = PlayerVelocity.X;
 	// Set the rotation so that the character faces his direction of travel.
-
-
 	if (Controller != nullptr)
 	{
 		if (TravelDirection < 0.0f)

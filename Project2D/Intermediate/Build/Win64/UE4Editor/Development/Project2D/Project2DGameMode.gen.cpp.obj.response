@@ -426,9 +426,9 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D
-/I D:\GitHub\Project2D\Project2D\Source
-/I D:\GitHub\Project2D\Project2D\Source\Project2D
+/I "D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D"
+/I "D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Source"
+/I "D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Source\Project2D"
 /I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
 /I ..\Plugins\2D\Paper2D\Source
 /I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
@@ -440,12 +440,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D\Project2DGameMode.gen.cpp"
-/FI"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Definitions.Project2D.h"
-/Fo"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2DGameMode.gen.cpp.obj"
+/FI"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D\Project2DGameMode.gen.cpp"
+/FI"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Definitions.Project2D.h"
+/Fo"D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2DGameMode.gen.cpp.obj"
 /TP
 /GR-
 /W4
