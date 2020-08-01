@@ -13,7 +13,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 // Cross Module References
-	PROJECT2D_API UEnum* Z_Construct_UEnum_Project2D_CharacterState();
+	PROJECT2D_API UEnum* Z_Construct_UEnum_Project2D_CharacterAnimationState();
 	UPackage* Z_Construct_UPackage__Script_Project2D();
 	PROJECT2D_API UClass* Z_Construct_UClass_AProject2DCharacter_NoRegister();
 	PROJECT2D_API UClass* Z_Construct_UClass_AProject2DCharacter();
@@ -22,26 +22,26 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
-	static UEnum* CharacterState_StaticEnum()
+	static UEnum* CharacterAnimationState_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
 		if (!Singleton)
 		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_Project2D_CharacterState, Z_Construct_UPackage__Script_Project2D(), TEXT("CharacterState"));
+			Singleton = GetStaticEnum(Z_Construct_UEnum_Project2D_CharacterAnimationState, Z_Construct_UPackage__Script_Project2D(), TEXT("CharacterAnimationState"));
 		}
 		return Singleton;
 	}
-	template<> PROJECT2D_API UEnum* StaticEnum<CharacterState>()
+	template<> PROJECT2D_API UEnum* StaticEnum<CharacterAnimationState>()
 	{
-		return CharacterState_StaticEnum();
+		return CharacterAnimationState_StaticEnum();
 	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_CharacterState(CharacterState_StaticEnum, TEXT("/Script/Project2D"), TEXT("CharacterState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Project2D_CharacterState_Hash() { return 342337767U; }
-	UEnum* Z_Construct_UEnum_Project2D_CharacterState()
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_CharacterAnimationState(CharacterAnimationState_StaticEnum, TEXT("/Script/Project2D"), TEXT("CharacterAnimationState"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_Project2D_CharacterAnimationState_Hash() { return 3465960465U; }
+	UEnum* Z_Construct_UEnum_Project2D_CharacterAnimationState()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_Project2D();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("CharacterState"), 0, Get_Z_Construct_UEnum_Project2D_CharacterState_Hash(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("CharacterAnimationState"), 0, Get_Z_Construct_UEnum_Project2D_CharacterAnimationState_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -73,8 +73,8 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_Project2D,
 				nullptr,
-				"CharacterState",
-				"CharacterState",
+				"CharacterAnimationState",
+				"CharacterAnimationState",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -99,6 +99,23 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsRunning_MetaData[];
+#endif
+		static void NewProp_IsRunning_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsRunning;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxRunningSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxRunningSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxWalikingSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxWalikingSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentHealth;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeadAnimation_MetaData[];
 #endif
@@ -159,6 +176,38 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		{ "ToolTip", "This class is the default character for Project2D, and it is responsible for all\nphysical interaction between the player and the world.\n\nThe capsule component (inherited from ACharacter) handles collision with the world\nThe CharacterMovementComponent (inherited from ACharacter) handles movement of the collision capsule\nThe Sprite component (inherited from APaperCharacter) handles the visuals" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning_MetaData[] = {
+		{ "Category", "Properties" },
+		{ "ModuleRelativePath", "Project2DCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning_SetBit(void* Obj)
+	{
+		((AProject2DCharacter*)Obj)->IsRunning = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning = { "IsRunning", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AProject2DCharacter), &Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning_SetBit, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxRunningSpeed_MetaData[] = {
+		{ "Category", "Properties" },
+		{ "ModuleRelativePath", "Project2DCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxRunningSpeed = { "MaxRunningSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, MaxRunningSpeed), METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxRunningSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxRunningSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxWalikingSpeed_MetaData[] = {
+		{ "Category", "Properties" },
+		{ "ModuleRelativePath", "Project2DCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxWalikingSpeed = { "MaxWalikingSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, MaxWalikingSpeed), METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxWalikingSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxWalikingSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CurrentHealth_MetaData[] = {
+		{ "Category", "Properties" },
+		{ "ModuleRelativePath", "Project2DCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CurrentHealth = { "CurrentHealth", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, CurrentHealth), METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CurrentHealth_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CurrentHealth_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData[] = {
 		{ "Category", "Animations" },
@@ -229,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state = { "state", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, state), Z_Construct_UEnum_Project2D_CharacterState, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state = { "state", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, state), Z_Construct_UEnum_Project2D_CharacterAnimationState, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -251,6 +300,10 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent = { "SideViewCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, SideViewCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IsRunning,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxRunningSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_MaxWalikingSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CurrentHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation,
@@ -290,7 +343,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProject2DCharacter, 1879570560);
+	IMPLEMENT_CLASS(AProject2DCharacter, 2179343753);
 	template<> PROJECT2D_API UClass* StaticClass<AProject2DCharacter>()
 	{
 		return AProject2DCharacter::StaticClass();
