@@ -72,11 +72,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProject2DCharacter); \
 	FORCEINLINE static uint32 __PPO__FallingAnimation() { return STRUCT_OFFSET(AProject2DCharacter, FallingAnimation); } \
 	FORCEINLINE static uint32 __PPO__LookingUpAnimation() { return STRUCT_OFFSET(AProject2DCharacter, LookingUpAnimation); } \
 	FORCEINLINE static uint32 __PPO__CrouchAnimation() { return STRUCT_OFFSET(AProject2DCharacter, CrouchAnimation); } \
-	FORCEINLINE static uint32 __PPO__DeadAnimation() { return STRUCT_OFFSET(AProject2DCharacter, DeadAnimation); } \
-	FORCEINLINE static uint32 __PPO__CurrentHealth() { return STRUCT_OFFSET(AProject2DCharacter, CurrentHealth); } \
-	FORCEINLINE static uint32 __PPO__MaxWalikingSpeed() { return STRUCT_OFFSET(AProject2DCharacter, MaxWalikingSpeed); } \
-	FORCEINLINE static uint32 __PPO__MaxRunningSpeed() { return STRUCT_OFFSET(AProject2DCharacter, MaxRunningSpeed); } \
-	FORCEINLINE static uint32 __PPO__IsRunning() { return STRUCT_OFFSET(AProject2DCharacter, IsRunning); }
+	FORCEINLINE static uint32 __PPO__DeadAnimation() { return STRUCT_OFFSET(AProject2DCharacter, DeadAnimation); }
 
 
 #define Project2D_Source_Project2D_Project2DCharacter_h_33_PROLOG
@@ -108,7 +104,7 @@ template<> PROJECT2D_API UClass* StaticClass<class AProject2DCharacter>();
 #define CURRENT_FILE_ID Project2D_Source_Project2D_Project2DCharacter_h
 
 
-#define FOREACH_ENUM_CHARACTERANIMATIONSTATE(op) \
+#define FOREACH_ENUM_CHARACTERSTATE(op) \
 	op(Idle) \
 	op(Walking) \
 	op(Running) \
