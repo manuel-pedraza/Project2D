@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,6 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECT2D_Project2DCharacter_generated_h
 
+#define Project2D_Source_Project2D_Project2DCharacter_h_36_SPARSE_DATA
 #define Project2D_Source_Project2D_Project2DCharacter_h_36_RPC_WRAPPERS
 #define Project2D_Source_Project2D_Project2DCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS
 #define Project2D_Source_Project2D_Project2DCharacter_h_36_INCLASS_NO_PURE_DECLS \
@@ -20,10 +21,8 @@ private: \
 	static void StaticRegisterNativesAProject2DCharacter(); \
 	friend struct Z_Construct_UClass_AProject2DCharacter_Statics; \
 public: \
-	DECLARE_CLASS(AProject2DCharacter, APaperCharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Project2D"), NO_API) \
-	DECLARE_SERIALIZER(AProject2DCharacter) \
-	static const TCHAR* StaticConfigName() {return TEXT("Game");} \
-
+	DECLARE_CLASS(AProject2DCharacter, APaperCharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Project2D"), NO_API) \
+	DECLARE_SERIALIZER(AProject2DCharacter)
 
 
 #define Project2D_Source_Project2D_Project2DCharacter_h_36_INCLASS \
@@ -31,10 +30,8 @@ private: \
 	static void StaticRegisterNativesAProject2DCharacter(); \
 	friend struct Z_Construct_UClass_AProject2DCharacter_Statics; \
 public: \
-	DECLARE_CLASS(AProject2DCharacter, APaperCharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Project2D"), NO_API) \
-	DECLARE_SERIALIZER(AProject2DCharacter) \
-	static const TCHAR* StaticConfigName() {return TEXT("Game");} \
-
+	DECLARE_CLASS(AProject2DCharacter, APaperCharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Project2D"), NO_API) \
+	DECLARE_SERIALIZER(AProject2DCharacter)
 
 
 #define Project2D_Source_Project2D_Project2DCharacter_h_36_STANDARD_CONSTRUCTORS \
@@ -80,6 +77,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProject2DCharacter); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_PRIVATE_PROPERTY_OFFSET \
+	Project2D_Source_Project2D_Project2DCharacter_h_36_SPARSE_DATA \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_RPC_WRAPPERS \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_INCLASS \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_STANDARD_CONSTRUCTORS \
@@ -91,6 +89,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_PRIVATE_PROPERTY_OFFSET \
+	Project2D_Source_Project2D_Project2DCharacter_h_36_SPARSE_DATA \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_INCLASS_NO_PURE_DECLS \
 	Project2D_Source_Project2D_Project2DCharacter_h_36_ENHANCED_CONSTRUCTORS \

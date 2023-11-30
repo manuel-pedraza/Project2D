@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -40,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeSMW_Player_State() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASMW_Player_State_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "SMW_Player_State.h" },
 		{ "ModuleRelativePath", "SMW_Player_State.h" },
@@ -51,18 +52,18 @@ void EmptyLinkFunctionForGeneratedCodeSMW_Player_State() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASMW_Player_State_Statics::ClassParams = {
 		&ASMW_Player_State::StaticClass,
-		nullptr,
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
-		0x009002A0u,
-		METADATA_PARAMS(Z_Construct_UClass_ASMW_Player_State_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ASMW_Player_State_Statics::Class_MetaDataParams))
+		0x009002A4u,
+		METADATA_PARAMS(Z_Construct_UClass_ASMW_Player_State_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASMW_Player_State_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ASMW_Player_State()
 	{
@@ -73,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeSMW_Player_State() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASMW_Player_State, 708122593);
+	IMPLEMENT_CLASS(ASMW_Player_State, 448988207);
 	template<> PROJECT2D_API UClass* StaticClass<ASMW_Player_State>()
 	{
 		return ASMW_Player_State::StaticClass();

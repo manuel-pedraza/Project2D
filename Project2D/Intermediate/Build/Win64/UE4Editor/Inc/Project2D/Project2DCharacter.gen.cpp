@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		return CharacterState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_CharacterState(CharacterState_StaticEnum, TEXT("/Script/Project2D"), TEXT("CharacterState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Project2D_CharacterState_Hash() { return 342337767U; }
+	uint32 Get_Z_Construct_UEnum_Project2D_CharacterState_Hash() { return 1146649034U; }
 	UEnum* Z_Construct_UEnum_Project2D_CharacterState()
 	{
 #if WITH_HOT_RELOAD
@@ -60,14 +60,22 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Crouch.DisplayName", "Crouch" },
+				{ "Crouch.Name", "Crouch" },
 				{ "Dead.DisplayName", "Dead" },
+				{ "Dead.Name", "Dead" },
 				{ "Falling.DisplayName", "Falling" },
+				{ "Falling.Name", "Falling" },
 				{ "Idle.DisplayName", "Idle" },
+				{ "Idle.Name", "Idle" },
 				{ "Jumping.DisplayName", "Jumping" },
+				{ "Jumping.Name", "Jumping" },
 				{ "LookingUp.DisplayName", "LookingUp" },
+				{ "LookingUp.Name", "LookingUp" },
 				{ "ModuleRelativePath", "Project2DCharacter.h" },
 				{ "Running.DisplayName", "Running" },
+				{ "Running.Name", "Running" },
 				{ "Walking.DisplayName", "Walking" },
+				{ "Walking.Name", "Walking" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -76,11 +84,11 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 				"CharacterState",
 				"CharacterState",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::Regular,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -153,6 +161,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * This class is the default character for Project2D, and it is responsible for all\n * physical interaction between the player and the world.\n *\n * The capsule component (inherited from ACharacter) handles collision with the world\n * The CharacterMovementComponent (inherited from ACharacter) handles movement of the collision capsule\n * The Sprite component (inherited from APaperCharacter) handles the visuals\n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Project2DCharacter.h" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
@@ -162,94 +171,104 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation = { "DeadAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, DeadAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation = { "DeadAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, DeadAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation = { "CrouchAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, CrouchAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation = { "CrouchAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, CrouchAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation = { "LookingUpAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, LookingUpAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation = { "LookingUpAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, LookingUpAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation = { "FallingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, FallingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation = { "FallingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, FallingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_FallingAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation = { "JumpingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, JumpingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation = { "JumpingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, JumpingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpingAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while running around\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while running around" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation = { "RunningAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, RunningAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation = { "RunningAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, RunningAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_RunningAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation = { "WalkingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, WalkingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation = { "WalkingAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, WalkingAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_WalkingAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation_MetaData[] = {
 		{ "Category", "Animations" },
+		{ "Comment", "// The animation to play while idle (standing still)\n" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "The animation to play while idle (standing still)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation = { "IdleAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, IdleAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation = { "IdleAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, IdleAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_IdleAnimation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData[] = {
 		{ "Category", "State" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state = { "state", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, state), Z_Construct_UEnum_Project2D_CharacterState, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state = { "state", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, state), Z_Construct_UEnum_Project2D_CharacterState, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_state_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
+		{ "Comment", "/** Camera boom positioning the camera beside the character */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "Camera boom positioning the camera beside the character" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
+		{ "Comment", "/** Side view camera */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Project2DCharacter.h" },
 		{ "ToolTip", "Side view camera" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent = { "SideViewCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, SideViewCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent = { "SideViewCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, SideViewCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation,
@@ -274,12 +293,12 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		nullptr,
 		Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers),
 		0,
-		0x008000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::Class_MetaDataParams))
+		0x008000A4u,
+		METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AProject2DCharacter()
 	{
@@ -290,7 +309,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProject2DCharacter, 1879570560);
+	IMPLEMENT_CLASS(AProject2DCharacter, 3161449191);
 	template<> PROJECT2D_API UClass* StaticClass<AProject2DCharacter>()
 	{
 		return AProject2DCharacter::StaticClass();

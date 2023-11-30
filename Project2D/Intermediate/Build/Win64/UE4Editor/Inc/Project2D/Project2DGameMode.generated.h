@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,6 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECT2D_Project2DGameMode_generated_h
 
+#define Project2D_Source_Project2D_Project2DGameMode_h_18_SPARSE_DATA
 #define Project2D_Source_Project2D_Project2DGameMode_h_18_RPC_WRAPPERS
 #define Project2D_Source_Project2D_Project2DGameMode_h_18_RPC_WRAPPERS_NO_PURE_DECLS
 #define Project2D_Source_Project2D_Project2DGameMode_h_18_INCLASS_NO_PURE_DECLS \
@@ -20,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAProject2DGameMode(); \
 	friend struct Z_Construct_UClass_AProject2DGameMode_Statics; \
 public: \
-	DECLARE_CLASS(AProject2DGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/Project2D"), PROJECT2D_API) \
+	DECLARE_CLASS(AProject2DGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/Project2D"), PROJECT2D_API) \
 	DECLARE_SERIALIZER(AProject2DGameMode)
 
 
@@ -29,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAProject2DGameMode(); \
 	friend struct Z_Construct_UClass_AProject2DGameMode_Statics; \
 public: \
-	DECLARE_CLASS(AProject2DGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/Project2D"), PROJECT2D_API) \
+	DECLARE_CLASS(AProject2DGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/Project2D"), PROJECT2D_API) \
 	DECLARE_SERIALIZER(AProject2DGameMode)
 
 
@@ -63,6 +64,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProject2DGameMode); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_PRIVATE_PROPERTY_OFFSET \
+	Project2D_Source_Project2D_Project2DGameMode_h_18_SPARSE_DATA \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_RPC_WRAPPERS \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_INCLASS \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_STANDARD_CONSTRUCTORS \
@@ -74,6 +76,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_PRIVATE_PROPERTY_OFFSET \
+	Project2D_Source_Project2D_Project2DGameMode_h_18_SPARSE_DATA \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_INCLASS_NO_PURE_DECLS \
 	Project2D_Source_Project2D_Project2DGameMode_h_18_ENHANCED_CONSTRUCTORS \

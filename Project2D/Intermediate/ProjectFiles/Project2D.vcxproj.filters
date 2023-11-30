@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F8443EB0-22A8-467A-B800-B54B3C4C5E30}</UniqueIdentifier>
+      <UniqueIdentifier>{DD59CC61-7E15-4EDD-981C-DF06B0EEDD44}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{F9A36F88-5C32-466E-A3FB-6275901D1572}</UniqueIdentifier>
+      <UniqueIdentifier>{0EAC506C-49B8-4FC3-B6AF-9FAF57E67CA6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project2D">
-      <UniqueIdentifier>{15932C66-C430-4166-9262-45E42A4CC72D}</UniqueIdentifier>
+      <UniqueIdentifier>{3E458003-5C4C-4AF9-838D-0A41490EFB33}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D\Project2D.Build.cs">
       <Filter>Source\Project2D</Filter>
@@ -52,6 +52,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Project2D\Project2DGameMode.h">
       <Filter>Source\Project2D</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\SMW_Player_State.cpp">
+      <Filter>Source\Project2D</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\SMW_Player_State.h">
+      <Filter>Source\Project2D</Filter>
+    </ClInclude>
+    <Filter Include="Source\Project2D\CPPTuto">
+      <UniqueIdentifier>{0D4C5676-8E6C-44DD-BC35-7F4457989FDE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\PrintMessage.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\PrintMessage.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

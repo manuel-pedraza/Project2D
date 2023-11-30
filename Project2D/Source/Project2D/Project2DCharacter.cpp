@@ -31,10 +31,7 @@ AProject2DCharacter::AProject2DCharacter()
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->TargetArmLength = 500.0f;
 	CameraBoom->SocketOffset = FVector(0.0f, 0.0f, 75.0f);
-	CameraBoom->bAbsoluteRotation = true;
 	CameraBoom->bDoCollisionTest = false;
-	CameraBoom->RelativeRotation = FRotator(0.0f, -90.0f, 0.0f);
-
 
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
@@ -43,7 +40,6 @@ AProject2DCharacter::AProject2DCharacter()
 	SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
 	// Prevent all automatic rotation behavior on the camera, character, and camera component
-	CameraBoom->bAbsoluteRotation = true;
 	SideViewCameraComponent->bUsePawnControlRotation = false;
 	SideViewCameraComponent->bAutoActivate = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
@@ -215,11 +211,11 @@ void AProject2DCharacter::UpdateCharacter()
 	{
 		if (TravelDirection < 0.0f)
 		{
-			Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
+			//Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
 		}
 		else if (TravelDirection > 0.0f)
 		{
-			Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
+			//Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
 		}
 	}
 }

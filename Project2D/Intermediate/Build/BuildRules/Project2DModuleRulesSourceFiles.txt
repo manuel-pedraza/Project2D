@@ -1,3 +1,0 @@
-D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Source\Project2D\Project2D.Build.cs
-D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Source\Project2D.Target.cs
-D:\Programmes(x86)\Epic Games\Unreal Projects\Project2D\Source\Project2DEditor.Target.cs

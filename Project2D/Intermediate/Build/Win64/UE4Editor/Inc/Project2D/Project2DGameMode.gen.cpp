@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -40,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DGameMode() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DGameMode_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * The GameMode defines the game being played. It governs the game rules, scoring, what actors\n * are allowed to exist in this game type, and who may enter the game.\n *\n * This game mode just sets the default pawn to be the MyCharacter asset, which is a subclass of Project2DCharacter\n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "Project2DGameMode.h" },
 		{ "ModuleRelativePath", "Project2DGameMode.h" },
@@ -52,18 +53,18 @@ void EmptyLinkFunctionForGeneratedCodeProject2DGameMode() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AProject2DGameMode_Statics::ClassParams = {
 		&AProject2DGameMode::StaticClass,
-		nullptr,
+		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
-		0x008802A8u,
-		METADATA_PARAMS(Z_Construct_UClass_AProject2DGameMode_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AProject2DGameMode_Statics::Class_MetaDataParams))
+		0x008802ACu,
+		METADATA_PARAMS(Z_Construct_UClass_AProject2DGameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DGameMode_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AProject2DGameMode()
 	{
@@ -74,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProject2DGameMode, 3324566770);
+	IMPLEMENT_CLASS(AProject2DGameMode, 3505033261);
 	template<> PROJECT2D_API UClass* StaticClass<AProject2DGameMode>()
 	{
 		return AProject2DGameMode::StaticClass();
