@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DD59CC61-7E15-4EDD-981C-DF06B0EEDD44}</UniqueIdentifier>
+      <UniqueIdentifier>{220B1A46-960E-45BB-AF42-6242B496E6E6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{0EAC506C-49B8-4FC3-B6AF-9FAF57E67CA6}</UniqueIdentifier>
+      <UniqueIdentifier>{7CC1196A-423A-492F-948C-DC652A50B066}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project2D">
-      <UniqueIdentifier>{3E458003-5C4C-4AF9-838D-0A41490EFB33}</UniqueIdentifier>
+      <UniqueIdentifier>{EDCE0AB8-A111-4911-9673-4E8FC90A45F9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D\Project2D.Build.cs">
       <Filter>Source\Project2D</Filter>
@@ -60,12 +60,24 @@
       <Filter>Source\Project2D</Filter>
     </ClInclude>
     <Filter Include="Source\Project2D\CPPTuto">
-      <UniqueIdentifier>{0D4C5676-8E6C-44DD-BC35-7F4457989FDE}</UniqueIdentifier>
+      <UniqueIdentifier>{2E3DDBAD-E3B9-495C-B63A-AEA6977C9A93}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\PrintMessage.cpp">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Project2D\CPPTuto\PrintMessage.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\TimerTest.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\TimerTest.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\UTimer.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\UTimer.h">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClInclude>
   </ItemGroup>

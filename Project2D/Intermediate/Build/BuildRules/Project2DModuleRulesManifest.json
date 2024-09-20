@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\GitHub\\Project2D\\Project2D\\Source\\Project2D\\Project2D.Build.cs",
+		"D:\\GitHub\\Project2D\\Project2D\\Source\\Project2D.Target.cs",
+		"D:\\GitHub\\Project2D\\Project2D\\Source\\Project2DEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.4"
+}

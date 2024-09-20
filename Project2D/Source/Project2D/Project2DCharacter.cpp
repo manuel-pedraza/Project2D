@@ -22,6 +22,7 @@ AProject2DCharacter::AProject2DCharacter()
 	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
 
+
 	// Set the size of our collision capsule.
 	GetCapsuleComponent()->SetCapsuleHalfHeight(96.0f);
 	GetCapsuleComponent()->SetCapsuleRadius(40.0f);
@@ -32,6 +33,9 @@ AProject2DCharacter::AProject2DCharacter()
 	CameraBoom->TargetArmLength = 500.0f;
 	CameraBoom->SocketOffset = FVector(0.0f, 0.0f, 75.0f);
 	CameraBoom->bDoCollisionTest = false;
+	CameraBoom->bInheritPitch = false;
+	CameraBoom->bInheritRoll = false;
+	CameraBoom->bInheritYaw = false;
 
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
@@ -211,11 +215,11 @@ void AProject2DCharacter::UpdateCharacter()
 	{
 		if (TravelDirection < 0.0f)
 		{
-			//Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
+			Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
 		}
 		else if (TravelDirection > 0.0f)
 		{
-			//Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
+			Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
 		}
 	}
 }
