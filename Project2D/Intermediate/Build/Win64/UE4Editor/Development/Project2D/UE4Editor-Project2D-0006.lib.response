@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\Project2DEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\CubeSpawner.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\PrintMessage.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\TimerTest.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\UTimer.cpp.obj"
@@ -14,6 +15,7 @@
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2DCharacter.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2DGameMode.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\SMW_Player_State.cpp.obj"
+"D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\CubeSpawner.gen.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\PrintMessage.gen.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2D.init.gen.cpp.obj"
 "D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Project2DCharacter.gen.cpp.obj"

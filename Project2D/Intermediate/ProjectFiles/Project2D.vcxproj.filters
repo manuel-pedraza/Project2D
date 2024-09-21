@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{220B1A46-960E-45BB-AF42-6242B496E6E6}</UniqueIdentifier>
+      <UniqueIdentifier>{0F1BA476-EE4D-4ECE-8A1E-E6BA599830D6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7CC1196A-423A-492F-948C-DC652A50B066}</UniqueIdentifier>
+      <UniqueIdentifier>{E9875C41-05B7-4ED3-8634-3EDAB66518E4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -26,11 +26,14 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project2D">
-      <UniqueIdentifier>{EDCE0AB8-A111-4911-9673-4E8FC90A45F9}</UniqueIdentifier>
+      <UniqueIdentifier>{600A692F-99F1-4438-B049-A3314E2B7DD2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D\Project2D.Build.cs">
       <Filter>Source\Project2D</Filter>
@@ -60,8 +63,20 @@
       <Filter>Source\Project2D</Filter>
     </ClInclude>
     <Filter Include="Source\Project2D\CPPTuto">
-      <UniqueIdentifier>{2E3DDBAD-E3B9-495C-B63A-AEA6977C9A93}</UniqueIdentifier>
+      <UniqueIdentifier>{F9C59065-2BC5-48FD-95CD-EE5D51FCDEF4}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\CubeSpawner.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\CubeSpawner.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\DestroyerGameMode.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\DestroyerGameMode.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\PrintMessage.cpp">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClCompile>
