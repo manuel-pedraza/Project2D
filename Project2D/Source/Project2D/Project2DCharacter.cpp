@@ -30,7 +30,7 @@ AProject2DCharacter::AProject2DCharacter()
 	// Create a camera boom attached to the root (capsule)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength =  1500.0f;
+	CameraBoom->TargetArmLength = 1500.0f;
 	CameraBoom->SocketOffset = FVector(0.0f, 0.0f, 1500.0f);
 	CameraBoom->bDoCollisionTest = false;
 	CameraBoom->bInheritPitch = false;
@@ -90,46 +90,52 @@ void AProject2DCharacter::UpdateAnimation()
 
 	UPaperFlipbook* DesiredAnimation = nullptr;
 
-	if (state == CharacterState::Jumping || state == CharacterState::Falling)
+	if (PlayerVelocity.Z < 0 || PlayerVelocity.Z > 0)
 	{
 		//(JumpKeyHoldTime >= GetJumpMaxHoldTime() || JumpKeyHoldTime == 0.0f)
 
-		state = ( PlayerVelocity.Z < 0 && GetCharacterMovement()->MovementMode == EMovementMode::MOVE_Falling) ?
+		if (state != CharacterState::Crouch)
+			state = (PlayerVelocity.Z < 0 && GetCharacterMovement()->MovementMode == EMovementMode::MOVE_Falling) ?
 			CharacterState::Falling : CharacterState::Jumping;
 
 	}
+	else if (PlayerSpeedSqr > 0.0f)
+	{
+		state = CharacterState::Walking;
+	}
 	else
 	{
-		state = (PlayerSpeedSqr > 0.0f) ? CharacterState::Walking : CharacterState::Idle;
+		if (!(state == CharacterState::Crouch || state == CharacterState::LookingUp))
+			state = CharacterState::Idle;
 	}
 
 
 	switch (state)
 	{
-		case CharacterState::Idle:
-			DesiredAnimation = IdleAnimation;
-			break;
-		case CharacterState::Walking:
-			DesiredAnimation = WalkingAnimation;
-			break;
-		case CharacterState::Running:
-			DesiredAnimation = RunningAnimation;
-			break;
-		case CharacterState::Jumping:
-			DesiredAnimation = JumpingAnimation;
-			break;
-		case CharacterState::Falling:
-			DesiredAnimation = FallingAnimation;
-			break;
-		case CharacterState::LookingUp:
-			DesiredAnimation = LookingUpAnimation;
-			break;
-		case CharacterState::Crouch:
-			DesiredAnimation = CrouchAnimation;
-			break;
-		case CharacterState::Dead:
-			DesiredAnimation = DeadAnimation;
-			break;
+	case CharacterState::Idle:
+		DesiredAnimation = IdleAnimation;
+		break;
+	case CharacterState::Walking:
+		DesiredAnimation = WalkingAnimation;
+		break;
+	case CharacterState::Running:
+		DesiredAnimation = RunningAnimation;
+		break;
+	case CharacterState::Jumping:
+		DesiredAnimation = JumpingAnimation;
+		break;
+	case CharacterState::Falling:
+		DesiredAnimation = FallingAnimation;
+		break;
+	case CharacterState::LookingUp:
+		DesiredAnimation = LookingUpAnimation;
+		break;
+	case CharacterState::Crouch:
+		DesiredAnimation = CrouchAnimation;
+		break;
+	case CharacterState::Dead:
+		DesiredAnimation = DeadAnimation;
+		break;
 
 	default:
 		break;
@@ -137,7 +143,7 @@ void AProject2DCharacter::UpdateAnimation()
 
 
 	// Are we moving or standing still?
-	if( GetSprite()->GetFlipbook() != DesiredAnimation 	)
+	if (GetSprite()->GetFlipbook() != DesiredAnimation)
 	{
 		GetSprite()->SetFlipbook(DesiredAnimation);
 	}
@@ -159,11 +165,30 @@ void AProject2DCharacter::StopJumping()
 	ACharacter::StopJumping();
 }
 
+void AProject2DCharacter::LookUp() {
+	state = CharacterState::LookingUp;
+}
+
+void AProject2DCharacter::StopLookUp() {
+	state = CharacterState::Idle;
+}
+
+void AProject2DCharacter::Crouching()
+{
+	state = CharacterState::Crouch;
+
+}
+
+void AProject2DCharacter::StopCrouching()
+{
+	state = CharacterState::Idle;
+}
+
+
 void AProject2DCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	//UE_LOG(LogTemp, Warning, TEXT("Tick"));
-
 
 	UpdateCharacter();
 }
@@ -177,7 +202,15 @@ void AProject2DCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	// Note: the 'Jump' action and the 'MoveRight' axis are bound to actual keys/buttons/sticks in DefaultInput.ini (editable from Project Settings..Input)
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AProject2DCharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AProject2DCharacter::StopJumping);
+
+	PlayerInputComponent->BindAction("LookUp", IE_Pressed, this, &AProject2DCharacter::LookUp);
+	PlayerInputComponent->BindAction("LookUp", IE_Released, this, &AProject2DCharacter::StopLookUp);
+
+	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AProject2DCharacter::Crouching);
+	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &AProject2DCharacter::StopCrouching);
+
 	PlayerInputComponent->BindAxis("MoveRight", this, &AProject2DCharacter::MoveRight);
+
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AProject2DCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AProject2DCharacter::TouchStopped);
@@ -193,12 +226,12 @@ void AProject2DCharacter::MoveRight(float Value)
 
 void AProject2DCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
-	
+
 }
 
 void AProject2DCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
-	
+
 }
 
 void AProject2DCharacter::UpdateCharacter()

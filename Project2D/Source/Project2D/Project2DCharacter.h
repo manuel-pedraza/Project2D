@@ -86,8 +86,13 @@ protected:
 
 
 	void Jump();
-
 	void StopJumping();
+
+	void LookUp();
+	void StopLookUp();
+
+	void Crouching();
+	void StopCrouching();
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
