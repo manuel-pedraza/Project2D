@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 	PROJECT2D_API UClass* Z_Construct_UClass_AProject2DCharacter_NoRegister();
 	PROJECT2D_API UClass* Z_Construct_UClass_AProject2DCharacter();
 	PAPER2D_API UClass* Z_Construct_UClass_APaperCharacter();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -108,6 +109,10 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_JumpSound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_JumpSound;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeadAnimation_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeadAnimation;
@@ -168,6 +173,15 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		{ "ToolTip", "This class is the default character for Project2D, and it is responsible for all\nphysical interaction between the player and the world.\n\nThe capsule component (inherited from ACharacter) handles collision with the world\nThe CharacterMovementComponent (inherited from ACharacter) handles movement of the collision capsule\nThe Sprite component (inherited from APaperCharacter) handles the visuals" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpSound_MetaData[] = {
+		{ "Category", "Sfx" },
+		{ "Comment", "// The sound to play when jumping\n" },
+		{ "ModuleRelativePath", "Project2DCharacter.h" },
+		{ "ToolTip", "The sound to play when jumping" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpSound = { "JumpSound", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, JumpSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpSound_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation_MetaData[] = {
 		{ "Category", "Animations" },
@@ -270,6 +284,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent = { "SideViewCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProject2DCharacter, SideViewCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_SideViewCameraComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProject2DCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_JumpSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_DeadAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_CrouchAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProject2DCharacter_Statics::NewProp_LookingUpAnimation,
@@ -309,7 +324,7 @@ void EmptyLinkFunctionForGeneratedCodeProject2DCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProject2DCharacter, 3161449191);
+	IMPLEMENT_CLASS(AProject2DCharacter, 3779289094);
 	template<> PROJECT2D_API UClass* StaticClass<AProject2DCharacter>()
 	{
 		return AProject2DCharacter::StaticClass();

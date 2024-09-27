@@ -155,8 +155,13 @@ void AProject2DCharacter::Jump()
 {
 	// Jump on any touch
 	ACharacter::Jump();
-	//UE_LOG(LogTemp, Warning, TEXT("I'm jumping"));
-	state = CharacterState::Jumping;
+
+	if (JumpCurrentCount < JumpMaxCount) {
+		UGameplayStatics::PlaySound2D(this, JumpSound);
+
+		//UE_LOG(LogTemp, Warning, TEXT("I'm jumping"));
+		state = CharacterState::Jumping;
+	}
 }
 
 void AProject2DCharacter::StopJumping()

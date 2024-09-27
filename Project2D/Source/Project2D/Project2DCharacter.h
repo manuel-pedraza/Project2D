@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "Kismet/GameplayStatics.h"
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
 #include "Project2DCharacter.generated.h"
@@ -30,28 +31,28 @@ enum CharacterState
  * The CharacterMovementComponent (inherited from ACharacter) handles movement of the collision capsule
  * The Sprite component (inherited from APaperCharacter) handles the visuals
  */
-UCLASS(config=Game)
+UCLASS(config = Game)
 class AProject2DCharacter : public APaperCharacter
 {
 	GENERATED_BODY()
 
-	/** Side view camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess="true"))
-	class UCameraComponent* SideViewCameraComponent;
+		/** Side view camera */
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class UCameraComponent* SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class USpringArmComponent* CameraBoom;
+		class USpringArmComponent* CameraBoom;
 
 	UTextRenderComponent* TextComponent;
 	virtual void Tick(float DeltaSeconds) override;
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
-	TEnumAsByte<CharacterState> state;
+		TEnumAsByte<CharacterState> state;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* IdleAnimation;
+		class UPaperFlipbook* IdleAnimation;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -59,7 +60,7 @@ protected:
 
 	// The animation to play while running around
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RunningAnimation;
+		class UPaperFlipbook* RunningAnimation;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -80,6 +81,11 @@ protected:
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 		class UPaperFlipbook* DeadAnimation;
+
+	// The sound to play when jumping
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sfx)
+		class USoundBase* JumpSound;
+
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
