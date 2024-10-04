@@ -9,6 +9,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "Camera/CameraComponent.h"
+#include "Koopa.h"
 
 DEFINE_LOG_CATEGORY_STATIC(SideScrollerCharacter, Log, All);
 
@@ -26,6 +27,7 @@ AProject2DCharacter::AProject2DCharacter()
 	// Set the size of our collision capsule.
 	GetCapsuleComponent()->SetCapsuleHalfHeight(27.0f);
 	GetCapsuleComponent()->SetCapsuleRadius(20.0f);
+	GetCapsuleComponent()->OnComponentBeginOverlap.AddDynamic(this, &AProject2DCharacter::OnOverlapBegin);
 
 	// Create a camera boom attached to the root (capsule)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -86,9 +88,15 @@ void AProject2DCharacter::UpdateAnimation()
 	const FVector PlayerVelocity = GetVelocity();
 	const float PlayerSpeedSqr = PlayerVelocity.SizeSquared();
 
-
-
 	UPaperFlipbook* DesiredAnimation = nullptr;
+
+	if (state == CharacterState::Dead || GetSprite()->GetFlipbook() == DeadAnimation) {
+		state == CharacterState::Dead;
+		GetSprite()->SetFlipbook(DeadAnimation);
+
+		return;
+	}
+
 
 	if (PlayerVelocity.Z < 0 || PlayerVelocity.Z > 0)
 	{
@@ -156,7 +164,7 @@ void AProject2DCharacter::Jump()
 	// Jump on any touch
 	ACharacter::Jump();
 
-	if (JumpCurrentCount < JumpMaxCount) {
+	if (GetSprite()->GetFlipbook() != DeadAnimation && JumpCurrentCount < JumpMaxCount) {
 		UGameplayStatics::PlaySound2D(this, JumpSound);
 
 		//UE_LOG(LogTemp, Warning, TEXT("I'm jumping"));
@@ -227,6 +235,7 @@ void AProject2DCharacter::MoveRight(float Value)
 
 	// Apply the input to the character motion
 	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+
 }
 
 void AProject2DCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
@@ -236,6 +245,24 @@ void AProject2DCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, cons
 
 void AProject2DCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
+
+}
+
+void AProject2DCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+
+	if (GetSprite()->GetFlipbook() != DeadAnimation) {
+		if (AKoopa* myActorPtr = Cast<AKoopa>(OtherActor)) {
+
+			UE_LOG(LogTemp, Warning, TEXT("Hello, KOOPA"));
+
+			UGameplayStatics::ClearSoundMixModifiers(this);
+
+			UGameplayStatics::PlaySound2D(this, DeadSound);
+			state = CharacterState::Dead;
+			GetCharacterMovement()->DisableMovement();
+		}
+	}
 
 }
 

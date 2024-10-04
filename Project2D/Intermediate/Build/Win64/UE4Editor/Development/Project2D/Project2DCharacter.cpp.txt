@@ -46,3 +46,5 @@ D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\
 D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+D:\GitHub\Project2D\Project2D\Source\Project2D\Koopa.h
+D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D\Koopa.generated.h

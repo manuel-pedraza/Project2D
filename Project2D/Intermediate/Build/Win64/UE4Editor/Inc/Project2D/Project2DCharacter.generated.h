@@ -8,14 +8,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef PROJECT2D_Project2DCharacter_generated_h
 #error "Project2DCharacter.generated.h already included, missing '#pragma once' in Project2DCharacter.h"
 #endif
 #define PROJECT2D_Project2DCharacter_generated_h
 
 #define Project2D_Source_Project2D_Project2DCharacter_h_37_SPARSE_DATA
-#define Project2D_Source_Project2D_Project2DCharacter_h_37_RPC_WRAPPERS
-#define Project2D_Source_Project2D_Project2DCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS
+#define Project2D_Source_Project2D_Project2DCharacter_h_37_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define Project2D_Source_Project2D_Project2DCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
 #define Project2D_Source_Project2D_Project2DCharacter_h_37_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAProject2DCharacter(); \
@@ -70,7 +81,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProject2DCharacter); \
 	FORCEINLINE static uint32 __PPO__LookingUpAnimation() { return STRUCT_OFFSET(AProject2DCharacter, LookingUpAnimation); } \
 	FORCEINLINE static uint32 __PPO__CrouchAnimation() { return STRUCT_OFFSET(AProject2DCharacter, CrouchAnimation); } \
 	FORCEINLINE static uint32 __PPO__DeadAnimation() { return STRUCT_OFFSET(AProject2DCharacter, DeadAnimation); } \
-	FORCEINLINE static uint32 __PPO__JumpSound() { return STRUCT_OFFSET(AProject2DCharacter, JumpSound); }
+	FORCEINLINE static uint32 __PPO__JumpSound() { return STRUCT_OFFSET(AProject2DCharacter, JumpSound); } \
+	FORCEINLINE static uint32 __PPO__DeadSound() { return STRUCT_OFFSET(AProject2DCharacter, DeadSound); }
 
 
 #define Project2D_Source_Project2D_Project2DCharacter_h_34_PROLOG
@@ -105,12 +117,16 @@ template<> PROJECT2D_API UClass* StaticClass<class AProject2DCharacter>();
 
 
 #define FOREACH_ENUM_CHARACTERSTATE(op) \
-	op(Idle) \
-	op(Walking) \
-	op(Running) \
-	op(Jumping) \
-	op(Falling) \
-	op(LookingUp) \
-	op(Crouch) \
-	op(Dead) 
+	op(CharacterState::Idle) \
+	op(CharacterState::Walking) \
+	op(CharacterState::Running) \
+	op(CharacterState::Jumping) \
+	op(CharacterState::Falling) \
+	op(CharacterState::LookingUp) \
+	op(CharacterState::Crouch) \
+	op(CharacterState::Dead) 
+
+enum class CharacterState;
+template<> PROJECT2D_API UEnum* StaticEnum<CharacterState>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

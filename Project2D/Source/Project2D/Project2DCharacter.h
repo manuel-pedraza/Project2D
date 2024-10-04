@@ -10,7 +10,7 @@
 class UTextRenderComponent;
 
 UENUM()
-enum CharacterState
+enum class CharacterState
 {
 	Idle		UMETA(DisplayName = "Idle"),
 	Walking		UMETA(DisplayName = "Walking"),
@@ -36,9 +36,9 @@ class AProject2DCharacter : public APaperCharacter
 {
 	GENERATED_BODY()
 
-		/** Side view camera */
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-		class UCameraComponent* SideViewCameraComponent;
+	/** Side view camera */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class UCameraComponent* SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
@@ -86,6 +86,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sfx)
 		class USoundBase* JumpSound;
 
+	// The sound to play when jumping
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sfx)
+		class USoundBase* DeadSound;
+
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
@@ -110,6 +114,9 @@ protected:
 
 	/** Handle touch stop event. */
 	void TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location);
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;

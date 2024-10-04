@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BFEB94A3-2D9D-4288-B49F-F2CA3AC4AE2A}</UniqueIdentifier>
+      <UniqueIdentifier>{99A468A2-32E8-4EE3-9A41-C105AF9A4A08}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B84A0425-A3D5-4332-9599-D145E5D6F222}</UniqueIdentifier>
+      <UniqueIdentifier>{633360A9-C086-4362-A2D0-7437403BE755}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,12 +33,12 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project2D">
-      <UniqueIdentifier>{9A06D8A7-D7B8-435A-B5FE-0CB023957F98}</UniqueIdentifier>
+      <UniqueIdentifier>{429299A2-3827-4FE7-80E9-B747FC2885E5}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Project2D\BaseEnemy.cpp">
+    <ClCompile Include="..\..\Source\Project2D\Koopa.cpp">
       <Filter>Source\Project2D</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Project2D\BaseEnemy.h">
+    <ClInclude Include="..\..\Source\Project2D\Koopa.h">
       <Filter>Source\Project2D</Filter>
     </ClInclude>
     <None Include="..\..\Source\Project2D\Project2D.Build.cs">
@@ -69,7 +69,7 @@
       <Filter>Source\Project2D</Filter>
     </ClInclude>
     <Filter Include="Source\Project2D\CPPTuto">
-      <UniqueIdentifier>{B25D9D3C-4C8D-4B58-999D-01B5AA5847C3}</UniqueIdentifier>
+      <UniqueIdentifier>{90379E0C-F523-4A5D-8AA6-D353C239585C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\CubeSpawner.cpp">
       <Filter>Source\Project2D\CPPTuto</Filter>
