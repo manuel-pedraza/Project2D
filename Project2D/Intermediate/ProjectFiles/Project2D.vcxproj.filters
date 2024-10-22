@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project2D.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{99A468A2-32E8-4EE3-9A41-C105AF9A4A08}</UniqueIdentifier>
+      <UniqueIdentifier>{A2344D18-BC50-453F-940C-0570C4731F1C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project2D.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{633360A9-C086-4362-A2D0-7437403BE755}</UniqueIdentifier>
+      <UniqueIdentifier>{6203DEEA-3CC9-4D36-8F8F-F4EC2741E230}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project2D">
-      <UniqueIdentifier>{429299A2-3827-4FE7-80E9-B747FC2885E5}</UniqueIdentifier>
+      <UniqueIdentifier>{46D7D09A-1C1F-4DFD-895C-BA8821AE04A6}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project2D\Koopa.cpp">
       <Filter>Source\Project2D</Filter>
@@ -69,8 +69,20 @@
       <Filter>Source\Project2D</Filter>
     </ClInclude>
     <Filter Include="Source\Project2D\CPPTuto">
-      <UniqueIdentifier>{90379E0C-F523-4A5D-8AA6-D353C239585C}</UniqueIdentifier>
+      <UniqueIdentifier>{E1459BF4-6735-4869-9F86-B567C0445A41}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\Charact.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\Charact.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\CharPlayerController.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\CharPlayerController.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\CubeSpawner.cpp">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClCompile>
@@ -83,10 +95,22 @@
     <ClInclude Include="..\..\Source\Project2D\CPPTuto\DestroyerGameMode.h">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\MouseInputGameModeBase.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\MouseInputGameModeBase.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\PrintMessage.cpp">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Project2D\CPPTuto\PrintMessage.h">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project2D\CPPTuto\ScreenConstants.cpp">
+      <Filter>Source\Project2D\CPPTuto</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project2D\CPPTuto\ScreenConstants.h">
       <Filter>Source\Project2D\CPPTuto</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Project2D\CPPTuto\TimerTest.cpp">

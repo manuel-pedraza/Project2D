@@ -261,6 +261,7 @@ void AProject2DCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AA
 			UGameplayStatics::PlaySound2D(this, DeadSound);
 			state = CharacterState::Dead;
 			GetCharacterMovement()->DisableMovement();
+			//Controller->DisableInput();
 		}
 	}
 
