@@ -6,7 +6,7 @@
 
 ACharPlayerController::ACharPlayerController() {
 	PrimaryActorTick.bCanEverTick = true;
-	SetInputMode(FInputModeGameAndUI());
+	//SetInputMode(FInputModeGameAndUI());
 }
 
 
