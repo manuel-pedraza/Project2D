@@ -1,9 +1,0 @@
-D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Development\Project2D\Definitions.Project2D.h
-D:\GitHub\Project2D\Project2D\Source\Project2D\Koopa.h
-D:\GitHub\Project2D\Project2D\Intermediate\Build\Win64\UE4Editor\Inc\Project2D\Koopa.generated.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipbookComponent.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbookComponent.generated.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-D:\Programmes(x86)\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h

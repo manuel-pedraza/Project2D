@@ -55,9 +55,6 @@ void AKoopa::Tick(float DeltaTime)
 	
 	FVector location = GetActorLocation();
 	location.X += 2 * (isGoingRight ? 1 : -1);
-
-	
-
 	SetActorLocation(location);
 
 }

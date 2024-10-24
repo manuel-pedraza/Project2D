@@ -2,6 +2,8 @@
 
 
 #include "InputPawn.h"
+#include "KeyboardInputPlayerController.h"
+#include "Components/StaticMeshComponent.h"
 #include "ScreenConstants.h"
 
 // Sets default values
@@ -17,6 +19,15 @@ void AInputPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	TArray<UStaticMeshComponent*> MeshComponents;
+	GetComponents(MeshComponents);
+
+	if (MeshComponents.Num() > 0) {
+		Mesh = MeshComponents[0];
+	}
+
+	Mesh->OnComponentBeginOverlap.AddDynamic(this, &AInputPawn::OnOverlapBegin);
+
 }
 
 // Called every frame
@@ -45,6 +56,18 @@ void AInputPawn::Tick(float DeltaTime)
 	}
 }
 
+void AInputPawn::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	UE_LOG(LogTemp, Warning, TEXT("HELLO INPUT PAWN"));
+
+	if (OtherActor && OtherActor == TargetPickup) {
+		Mesh->SetAllPhysicsLinearVelocity(FVector::ZeroVector);
+		AKeyboardInputPlayerController* controller = (AKeyboardInputPlayerController*)GetController();
+		if (controller)
+			controller->DestroyPickup(TargetPickup);
+	}
+}
+
 void AInputPawn::MoveHorizontally(float moveScale)
 {
 	moveScale = FMath::Clamp(moveScale, -1.0f, 1.0f);
@@ -62,5 +85,26 @@ void AInputPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void AInputPawn::GoToPickup(ACoinPickup* pickup)
+{
+	TargetPickup = pickup;
+
+	// AddImpulse force to sprite
+	FVector ForceVector = GetForceVector(
+		GetActorLocation(),
+		TargetPickup->GetActorLocation()
+	);
+
+	Mesh->AddImpulse(ForceVector);
+
+}
+
+FVector AInputPawn::GetForceVector(FVector PawnLocation, FVector PickupLocation)
+{
+	FVector Direction = PickupLocation - PawnLocation;
+	Direction.Normalize();
+	return Direction * ForceMagnitude;
 }
 

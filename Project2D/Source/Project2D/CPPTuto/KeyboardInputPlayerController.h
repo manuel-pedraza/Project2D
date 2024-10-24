@@ -31,5 +31,5 @@ private:
 	UPROPERTY()
 		TArray<ACoinPickup*> Pickups;
 	bool collecting = false;
-
+	void GoToNextPickup();
 };
